@@ -1,6 +1,6 @@
 import { GraphQLSchema } from "graphql/type/index.js";
-import { RootQueryType } from "./query.js";
-import {Mutations} from "./mutation.js";
+import { RootQueryType } from "./query.schema.js";
+import {Mutations} from "./mutation.schema.js";
 
 export const gqlSchema = new GraphQLSchema({
     query: RootQueryType,
