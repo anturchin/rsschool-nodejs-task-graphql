@@ -3,7 +3,7 @@ import {
     GraphQLObjectType,
     GraphQLString,
     GraphQLFloat,
-    GraphQLList,
+    GraphQLList, GraphQLInputObjectType,
 } from "graphql";
 import { Profile } from "./profile.schema.js";
 import { Post } from "./post.schema.js";
@@ -61,4 +61,21 @@ export const User = new GraphQLObjectType({
             },
         },
     }),
+}) as GraphQLObjectType;
+
+
+export const CreateUserInput = new GraphQLInputObjectType({
+    name: 'CreateUserInput',
+    fields: {
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        balance: { type: new GraphQLNonNull(GraphQLFloat) },
+    },
 });
+
+export const ChangeUserInput = new GraphQLInputObjectType({
+    name: 'ChangeUserInput',
+    fields: {
+        name: { type: GraphQLString },
+        balance: { type: GraphQLFloat },
+    }
+})

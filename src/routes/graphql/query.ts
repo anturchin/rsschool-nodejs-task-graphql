@@ -9,8 +9,8 @@ import { Profile } from "./profile.schema.js";
 
 
 
-export const Query = new GraphQLObjectType({
-    name: 'QueryType',
+export const RootQueryType = new GraphQLObjectType({
+    name: 'RootQueryType',
     fields: {
         memberTypes: {
             type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(MemberType))),

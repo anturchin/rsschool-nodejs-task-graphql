@@ -1,6 +1,6 @@
 import { GraphQLSchema } from "graphql/type/index.js";
-import { Query } from "./query.js";
+import { RootQueryType } from "./query.js";
 
 export const gqlSchema = new GraphQLSchema({
-    query: Query,
+    query: RootQueryType,
 })
