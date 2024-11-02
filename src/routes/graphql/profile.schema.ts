@@ -4,7 +4,7 @@ import {
     GraphQLBoolean,
     GraphQLInt, GraphQLInputObjectType,
 } from "graphql";
-import {MemberType, MemberTypeId} from "./member-type.schema.js";
+import { MemberType, MemberTypeId } from "./member-type.schema.js";
 import { UUIDType } from "./types/uuid.js";
 import { PrismaClient } from "@prisma/client";
 
